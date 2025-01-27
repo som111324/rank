@@ -35,7 +35,7 @@ exports.claimPoints = async (req, res) => {
       return res.status(404).json({ error: 'User not found' });
     }
 
-
+    // Update user's points
     user.totalPoints += points;
     await user.save();
 
