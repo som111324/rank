@@ -9,6 +9,10 @@ app.use(express.json());
 // Connect to the database
 connectDB();
 
+
+app.get('/', (req, res) => {
+    res.send('Welcome to the API! Use /api/users and /api/rankings to interact with the system.');
+  });
 // API Routes
 app.use('/api/users', userRoutes);
 app.use('/api/rankings', rankRoutes);
